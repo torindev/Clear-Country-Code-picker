@@ -1602,7 +1602,7 @@ public class CountryUtils {
                                                   List<Country> customCountries,
                                                   String nameCode) {
     if (customCountries == null || customCountries.size() == 0) {
-      return getByNameCodeFromAllCountries(context, nameCode);
+      return getCountryByIsoCode(context, nameCode);
     } else {
       for (Country country : customCountries) {
         if (country.getIso().equalsIgnoreCase(nameCode)) {
