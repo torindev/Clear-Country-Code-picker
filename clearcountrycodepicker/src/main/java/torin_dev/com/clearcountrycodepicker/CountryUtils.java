@@ -14,7 +14,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-class CountryUtils {
+public class CountryUtils {
   private static final String TAG = CountryUtils.class.getSimpleName();
 
   private static List<Country> countries;
