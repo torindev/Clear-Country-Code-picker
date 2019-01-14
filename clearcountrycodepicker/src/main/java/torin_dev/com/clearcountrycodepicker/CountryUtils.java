@@ -1620,7 +1620,7 @@ public class CountryUtils {
    * @return Country that has phone code as @param code.
    * or returns null if no country matches given code.
    */
-  static Country getByNameCodeFromAllCountries(Context context, String nameCode) {
+  public static Country getCountryByIsoCode(Context context, String nameCode) {
     List<Country> countries = CountryUtils.getAllCountries(context);
     for (Country country : countries) {
       if (country.getIso().equalsIgnoreCase(nameCode)) {
@@ -1630,7 +1630,7 @@ public class CountryUtils {
     return null;
   }
 
-  static List<String> getCountryIsoByTimeZone(Context context, String timeZoneId) {
+  public static List<String> getCountryIsoByTimeZone(Context context, String timeZoneId) {
     Map<String, List<String>> timeZoneAndCountryIsos = getTimeZoneAndCountryISOs(context);
     return timeZoneAndCountryIsos.get(timeZoneId);
   }
